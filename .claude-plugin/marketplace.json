@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "taskflow",
+  "owner": {
+    "name": "Ali Afsahnoudeh"
+  },
+  "description": "Claude Code pipeline from the figma-to-code-claude-pipeline demo: Figma-to-code agents, design-system checks, and review/test/commit workflows, packaged as an installable plugin.",
+  "plugins": [
+    {
+      "name": "taskflow-pipeline",
+      "source": "./plugins/taskflow-pipeline",
+      "description": "Figma-to-code agents, design-system compliance, code review, tests, commit/PR skills, edit hooks, and the Figma + Playwright MCP servers.",
+      "category": "development",
+      "keywords": [
+        "figma",
+        "design-system",
+        "frontend",
+        "code-review",
+        "pipeline"
+      ]
+    }
+  ]
+}
