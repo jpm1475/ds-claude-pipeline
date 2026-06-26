@@ -25,6 +25,7 @@ backend/          FastAPI + Pydantic + in-memory store + pytest
 web/              Next.js App Router, domain-driven src/domains/, Jest + RTL
 design-system/    pnpm workspace: @taskflow/themes, @taskflow/components, Storybook
 .claude/          agents, hooks, skills, settings template
+plugins/          the pipeline packaged as an installable Claude Code plugin
 docs/             FIGMA_TO_CODE_PIPELINE.md — the source for the post
 scripts/          init-claude.js bootstrap
 ```
@@ -38,6 +39,23 @@ context based on which sub-project you're working in:
 | [web/CLAUDE.md](web/CLAUDE.md)                     | frontend rules: Design System imports, tokens, visual verify          |
 | [backend/CLAUDE.md](backend/CLAUDE.md)             | backend rules: async, Pydantic, in-memory store                       |
 | [design-system/CLAUDE.md](design-system/CLAUDE.md) | Design System rules: token schema, wrapper pattern, 8 non-negotiables |
+
+## Install the pipeline as a plugin
+
+You don't have to clone this repo to use its agents and skills. The whole pipeline is
+published as a Claude Code [plugin](https://code.claude.com/docs/en/plugins) through a
+marketplace at the repo root, so you can plug it into any project:
+
+```text
+/plugin marketplace add aliafsahnoudeh/figma-to-code-claude-pipeline
+/plugin install taskflow-pipeline@taskflow
+```
+
+That installs the `figma-impl` and design-system agents, the review/test/`commit`/`pr`
+skills, the `.env` read-guard + Prettier + `tsc` hooks, and the Figma + Playwright MCP
+servers (the Figma token is prompted at enable time — no placeholder to hand-edit). See
+[plugins/taskflow-pipeline/README.md](plugins/taskflow-pipeline/README.md) for the full
+component list and which pieces are project-agnostic versus TaskFlow-specific.
 
 ## Setup
 
