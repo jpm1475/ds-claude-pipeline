@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "ds-pipeline",
+  "displayName": "Design System Pipeline",
+  "version": "0.1.0",
+  "description": "Figma-to-code pipeline for a pnpm design-system monorepo: component-builder, block-builder, token-sync, design-system-check, code review, tests, commit and PR skills, plus the Figma and Playwright MCP servers.",
+  "author": {
+    "name": "jpm1475"
+  },
+  "homepage": "https://github.com/jpm1475/ds-claude-pipeline",
+  "repository": "https://github.com/jpm1475/ds-claude-pipeline",
+  "license": "MIT",
+  "keywords": ["figma", "design-system", "design-tokens", "react", "storybook"]
+}

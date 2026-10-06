@@ -1,23 +1,17 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
-  "name": "taskflow",
+  "name": "jpm1475-tools",
   "owner": {
-    "name": "Ali Afsahnoudeh"
+    "name": "jpm1475"
   },
-  "description": "Claude Code pipeline from the figma-to-code-claude-pipeline demo: Figma-to-code agents, design-system checks, and review/test/commit workflows, packaged as an installable plugin.",
+  "description": "Claude Code tooling for the jpm1475 design system.",
   "plugins": [
     {
-      "name": "taskflow-pipeline",
-      "source": "./plugins/taskflow-pipeline",
-      "description": "Figma-to-code agents, design-system compliance, code review, tests, commit/PR skills, edit hooks, and the Figma + Playwright MCP servers.",
+      "name": "ds-pipeline",
+      "source": "./plugins/ds-pipeline",
+      "description": "Figma-to-code agents for a token-driven React design system: component and block builders, two-way Figma token sync, design system checks, review, tests, and commit/PR skills.",
       "category": "development",
-      "keywords": [
-        "figma",
-        "design-system",
-        "frontend",
-        "code-review",
-        "pipeline"
-      ]
+      "keywords": ["figma", "design-system", "design-tokens", "react", "storybook"]
     }
   ]
 }

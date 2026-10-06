@@ -1,1 +1,0 @@
-../../plugins/taskflow-pipeline/hooks/tsc.js
