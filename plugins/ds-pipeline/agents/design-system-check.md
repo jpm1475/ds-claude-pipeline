@@ -26,6 +26,9 @@ Load `packages/tokens/dist/tier-map.json` (CSS variable name to collection). If 
 9. Icon colors come only from `icon-context` variables; text styles (font size, line height, weight, letter spacing, family) only from `typography-semantics` variables. No hand-written media queries that change font sizes.
 10. Token source files (`packages/tokens/src/**/*.json`) follow `packages/tokens/CLAUDE.md`: raw values only in `primitives` and `typography-primitives`; references only, to allowed collections, elsewhere; every token keeps `$extensions["com.figma"].variableId` once synced.
 11. No `@font-face`, font file imports or hard-coded font-family names in components or blocks; families come only from typography tokens.
+12. Story titles match their location: `packages/components/src/<Name>` uses `Components/`, `packages/components/src/patterns/<Name>` uses `Patterns/`, `packages/blocks` uses `Blocks/`, and `packages/tokens/src/docs` uses `Foundations/`. Every story file sets `title` explicitly.
+13. Shadows use only `var(--ds-elevation-*)`; stacking (`z-index`) uses only `var(--ds-z-*)`. Icons use `var(--ds-icon-*)` through the Icon component's `context` prop.
+14. Props follow the naming map in `docs/figma-conventions.md` section 6: `size` values `xs` to `xl`, `variant` lowercased, `disabled` as a boolean, no hover, pressed or focus props, `iconStart`/`iconEnd` for icon slots.
 
 ## Output
 

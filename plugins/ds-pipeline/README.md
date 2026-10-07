@@ -7,11 +7,16 @@ A Claude Code plugin marketplace with one plugin, **ds-pipeline**: a Figma-to-co
 | Kind | Name | Purpose |
 | --- | --- | --- |
 | Agent | `component-builder` | Builds one React component from a Figma frame or a spec, verifies it in Playwright and with axe |
-| Agent | `block-builder` | Builds one page section from existing components only |
+| Agent | `pattern-builder` | Builds one pattern (Navigation, Breadcrumbs, Form) from existing components |
+| Agent | `block-builder` | Builds one page section from existing components and patterns only |
 | Agent | `token-sync` | Two-way sync between the Figma variable collections and the DTCG token source |
 | Agent | `design-system-check` | Fast lint pass over changed files against the design system rules |
 | Agent | `code-reviewer` | Reviews changes against the repo's CLAUDE.md files |
 | Agent | `test-writer` | Vitest, Testing Library and vitest-axe tests |
+| Skill | `/ds-pipeline:tokens` | Stage 1: audit and sync tokens toward a stable 1.0 |
+| Skill | `/ds-pipeline:component` | Stage 2: build one component from its Figma component set |
+| Skill | `/ds-pipeline:pattern` | Stage 3: build one pattern from existing components |
+| Skill | `/ds-pipeline:block` | Stage 4: build one page section block |
 | Skill | `/ds-pipeline:commit` | Atomic Conventional Commits |
 | Skill | `/ds-pipeline:pr` | Checks changesets, then opens a PR with `gh` |
 | Hooks | | `.env` read guard, Prettier and typecheck on edit, token-change reminder |
