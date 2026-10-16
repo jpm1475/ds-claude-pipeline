@@ -15,7 +15,7 @@ Load `packages/tokens/dist/tier-map.json` (CSS variable name to collection). If 
 
 ## Rules
 
-1. **No raw values** in component or block CSS for color (hex, rgb, hsl, named colors other than `transparent` and `currentColor`), spacing, radii, shadows, font sizes, line heights or font weights. Only `var(--ds-*)`. Allowed raw values: `0`, `100%`, `auto`, `inherit`, `currentColor`, `transparent`, and `1px` borders.
+1. **No raw values** in component or block CSS for color (hex, rgb, hsl, named colors other than `transparent` and `currentColor`), spacing, radii, shadows, font sizes, line heights, letter spacing or font weights. Only `var(--ds-*)`. Allowed raw values: `0`, `100%`, `auto`, `inherit`, `currentColor`, `transparent`, and `1px` borders.
 2. Every CSS module wraps all its rules in `@layer ds { ... }`.
 3. No imports from other UI or styling libraries (MUI, Chakra, Radix Themes, styled-components, emotion, Tailwind, etc.).
 4. Blocks import UI only from `@jpm1475/ds-components` (root or subpath) and never use `:global` or descendant selectors that reach into a component.

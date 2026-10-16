@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "ds-pipeline",
   "displayName": "Design System Pipeline",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Figma-to-code pipeline for a pnpm design-system monorepo: component-builder, pattern-builder, block-builder, token-sync, design-system-check, code review, tests, commit and PR skills, the four stage skills (tokens, component, pattern, block), plus the Figma and Playwright MCP servers.",
   "author": {
     "name": "jpm1475"
